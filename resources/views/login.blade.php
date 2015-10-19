@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-</head>
+@extends('masterpage')
+@section('content')
 
-<body>
-<form action="dashboard.blade.php" method="post">
+
+<form action="/dashboard" method="post">
+    <input type="hidden" name="_token" value="<?php echo csrf_token();  //For security ?>">
     Username : <input type="text" name="username" id="username">
     Password : <input type="text" name="password" id="password">
     <input type="submit" value="Save">
     </form>
 
-
-</body>
-
+ @stop
 
 
 
-
-
-</html>

@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-</head>
+@extends('masterpage')
+@section('content')
 
-<body>
-<form action="login.blade.php" method="post">
+
+
+<form action="/login" method="post">
+    <input type="hidden" name="_token" value="<?php echo csrf_token(); //For security. It protect data which was post. ?>">
     <h1>Welcome to Catland</h1>
     <p>Please log in</p>
     <input type="submit" value="Log in">
 </form>
 
-</body>
+@stop
 
 
 
 
 
+@section('footer')
 
-</html>
+    <script>alert('LOGIN PLEASE!');</script>
+
+    @stop
