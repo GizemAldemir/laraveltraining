@@ -10,7 +10,7 @@
     <h1>Welcome to Catland</h1>
     <p>Please log in</p>
     <input type="submit" value="Log in">
-
+</form>
 
 </body>
 
