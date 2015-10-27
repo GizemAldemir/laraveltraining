@@ -10,10 +10,23 @@
     <input type="submit" value="Log in">
 </form>
 
+
+  @if(count($animal))
+
+    <h1>Animals I like </h1>
+    <ul>
+        @foreach($animal as $animals)
+            <li>
+               {{ $animals }}
+            </li>
+
+            @endforeach
+
+    </ul>
+
+    @endif
+
 @stop
-
-
-
 
 
 @section('footer')

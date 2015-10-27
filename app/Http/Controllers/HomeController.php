@@ -10,7 +10,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $animal = [ 'cat', 'dog', 'bird'];
+        return view('index' , compact('animal'));
+
     }
 
 
@@ -18,5 +20,12 @@ class HomeController extends Controller
     public function login()
     {
         return view('login');
+    }
+
+
+
+    public function dashboard()
+    {
+        return view('dashboard');
     }
 }
